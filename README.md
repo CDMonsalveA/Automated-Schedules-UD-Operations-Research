@@ -1,7 +1,7 @@
 # Automated Schedules UD Operations Research
 This repository contains the code for the automated schedules project. The project is a part of the [UD Operations Research] for the Universidad Distrital Francisco José de Caldas, Engineering Faculty.
 
-Created by: Cristian David Monsalve Alfonso
+Created by: [Cristian David Monsalve Alfonso](https://github.com/CDMonsalveA)
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -22,7 +22,16 @@ The script is based on information on spreadsheets, which are read by the script
     - Filtered by Salones so only the ones reported in the spreadsheet as 'Espacios_Fisicos' are selected
     - Finally, anything related to 'Trabajo de Grado' is filtered out so that the schedules represent the classes need a physical space.
 3. The data is then processed to generate the schedules.
-    - d
+    - Create the information for Espacios Académicos (Materias)
+        - Create a list of the unique values of the "Espacio Academico" column
+        - Create a new column with the hours per week of the course
+        - Create a new column with the number times the course is offered per week
+        - Rename the column "Hora" to "Horas por semana" and "Dia" to "Dias por semana"
+4. Create the information for available times linearize the 
+
+
+
+
 
 
 
