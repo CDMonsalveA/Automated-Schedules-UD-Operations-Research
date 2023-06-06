@@ -1,9 +1,11 @@
 # Automated Schedules UD Operations Research
+
 This repository contains the code for the automated schedules project. The project is a part of the [UD Operations Research] for the Universidad Distrital Francisco José de Caldas, Engineering Faculty.
 
 Created by: [Cristian David Monsalve Alfonso](https://github.com/CDMonsalveA)
 
 ## Table of Contents
+
 - [Introduction](#introduction)
 - [How it works](#how-it-works)
 - [How to use](#how-to-use)
@@ -11,9 +13,11 @@ Created by: [Cristian David Monsalve Alfonso](https://github.com/CDMonsalveA)
 - [License](#license)
 
 ## Introduction
+
 The project is a part of the [UD Operations Research] for the Universidad Distrital Francisco José de Caldas, Engineering Faculty. The project is a part of the [UD Operations Research] for the Universidad Distrital Francisco José de Caldas, Engineering Faculty.
 
 ## How it works
+
 The script is based on information on spreadsheets, which are read by the script and then the data is processed to generate the schedules.
 
 1. The script reads the information from the spreadsheets.
@@ -40,37 +44,20 @@ The script is based on information on spreadsheets, which are read by the script
         7. 41-200
     - The output will be a comparison of the capacity of the Espacios_Fisicos and Espacios_Academicos in form of a tables with rows as Proyecto Curricular and columns as the 7 categories
 6. Create the information for the schedules
-    - Using Linear Programming, the schedules are generated
-        - The Linear Programming problem is formulated as follows:
-        - index definition:
-            - $i$: Salones
-            - $c$: Clasificaciones
-            - $j$: Proyectos Curriculares
-            - $k$: Dias
-        - Variables:
-            - $x_{[i,c,j,k]}$: 1 if the Salon i i of clasification c is assigned to project j on day k, 0 otherwise
-        - Objective:
-            - Minimize the number of Salones used
-            $$\min \sum_{i,c,j,k} x_{[i,c,j,k]}$$
-        - Parameters:
-            - $Horas_{[k]}$: Number of hours on day k
-            - $Demanda_{[j,c]}$: Demand of project j of clasification c in hours per week
-            - $Clasificador_{[i,c]}$: 1 if the Salon i can satisfy the need of a clasification c, 0 otherwise
-        - Constraints:
-            1. a room assigned to a project on a day can be assigned to at most one category
-                $$\sum_{c} x_{[i,c,j,k]} \leq 1$$
-            2. a room of category c can be assigned to a project on a day if the room can be assigned to a clasification
-                $$x_{[i,c,j,k]} \leq Clasificador_{[i,c]}$$
-            3. there can only maximum 1 project assigned to a room of a category on a day
-                $$\sum_{j,c} x_{[i,c,j,k]} \leq 1$$
-            4. the asignation of a room of a category to a project on a day must satisfy the demand
-                $$\sum_{k} \sum_{i} x_{[i,c,j,k]} \cdot Horas_{[k]} \geq Demanda_{[j,c]}$$
+
+    - The model from Model_Explanation\MODEL.md is used to create the schedules
         - The solution is then read and the schedules are generated
+
 ## How to use
+
 in progress
+
 ## Download The Solution
+
 Dowload the solution [in the Github: Solution.xlsx file](https://github.com/CDMonsalveA/Automated-Schedules-UD-Operations-Research/raw/master/Solucion.xlsx)
+
 ## License
+
 MIT License
 
 Copyright (c) 2023 Cristian Monsalve
@@ -94,6 +81,3 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-
-
