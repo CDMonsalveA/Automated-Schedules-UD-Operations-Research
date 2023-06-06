@@ -1,9 +1,11 @@
 # Automated Schedules UD Operations Research
+
 This repository contains the code for the automated schedules project. The project is a part of the [UD Operations Research] for the Universidad Distrital Francisco José de Caldas, Engineering Faculty.
 
 Created by: [Cristian David Monsalve Alfonso](https://github.com/CDMonsalveA)
 
 ## Table of Contents
+
 - [Introduction](#introduction)
 - [How it works](#how-it-works)
 - [How to use](#how-to-use)
@@ -11,9 +13,11 @@ Created by: [Cristian David Monsalve Alfonso](https://github.com/CDMonsalveA)
 - [License](#license)
 
 ## Introduction
+
 The project is a part of the [UD Operations Research] for the Universidad Distrital Francisco José de Caldas, Engineering Faculty. The project is a part of the [UD Operations Research] for the Universidad Distrital Francisco José de Caldas, Engineering Faculty.
 
 ## How it works
+
 The script is based on information on spreadsheets, which are read by the script and then the data is processed to generate the schedules.
 
 1. The script reads the information from the spreadsheets.
@@ -66,11 +70,17 @@ The script is based on information on spreadsheets, which are read by the script
             4. the asignation of a room of a category to a project on a day must satisfy the demand
                 $$\sum_{k} \sum_{i} x_{[i,c,j,k]} \cdot Horas_{[k]} \geq Demanda_{[j,c]}$$
         - The solution is then read and the schedules are generated
+
 ## How to use
+
 in progress
+
 ## Download The Solution
+
 Dowload the solution [in the Github: Solution.xlsx file](https://github.com/CDMonsalveA/Automated-Schedules-UD-Operations-Research/raw/master/Solucion.xlsx)
+
 ## License
+
 MIT License
 
 Copyright (c) 2023 Cristian Monsalve
@@ -94,6 +104,3 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-
-
