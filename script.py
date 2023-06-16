@@ -1,21 +1,33 @@
+"""Module for interacting with the base data"""
 import pandas as pd
-import numpy as np
-from pulp import *
 
 
-class Base_Schedules:
-    def __init__(self, Schedules, Classrooms, Timeslots):
-        self.Schedules = Schedules
-        self.Classrooms = Classrooms
-        self.Timeslots = Timeslots
-    def filter(self):
-        
+
+class BaseSchedules:
+    '''
+    Class for interacting with the base data
+    '''
+    def __init__(self, schedules, classrooms, timeslots):
+        self.schedules = schedules
+        self.classrooms = classrooms
+        self.timeslots = timeslots
+
+    def filter_by(self, column, _filter_array):
+        '''
+        Filter a dataset by a list of filters
+        '''
+        return self[self[column].isin(filter)].copy()
 
 def main():
-    Base_Schedules.Schedules = pd.read_excel('Base_Data/Horarios.xlsx', sheet_name='Horarios')
-    Base_Schedules.Classrooms = pd.read_excel('Base_Data/Horarios.xlsx', sheet_name='Espacios_Fisicos')
-    Base_Schedules.Timeslots = pd.read_excel('Base_Data/Horarios.xlsx', sheet_name='Tiempo')
+    '''
+    Main function for testing the module
+    '''
+    BaseSchedules.Schedules = pd.read_excel(r'Base_Data\Horarios.xlsx',
+        sheet_name='Horarios')
+    BaseSchedules.Classrooms = pd.read_excel(r'Base_Data\Horarios.xlsx',
+        sheet_name='Espacios_Fisicos')
+    BaseSchedules.Timeslots = pd.read_excel(r'Base_Data\Horarios.xlsx',
+        sheet_name='Tiempo')
 
 if __name__ == "__main__":
-    main()  
-
+    main()
