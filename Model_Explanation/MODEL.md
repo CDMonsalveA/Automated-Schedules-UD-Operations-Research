@@ -41,3 +41,9 @@
 3. A Project may only count one group per classroom, per day $$\sum_{g,p} X_{c,g,p,d} \leq 1 \quad \forall c,d$$
 
 4. The assignment of a classroom to a group to a project to a day must satisfy the requirement $$\sum_{c} X_{c,g,p,d} \cdot H_{d} \geq R_{p,g,d} \quad \forall g,p,d$$
+
+add weight to make them more accesible on movements
+clases del m,ismo semestre
+profesor en el mismo salón
+pensar en la ocupación de sillas
+
